@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有： 占位符 | 替换内容 —|— %d | 整数 %s | 字符串 %f | 浮点数 %x | 十六进制整数  采用format()方法   条件判断1234567num =">
+<meta name="description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有：  | 占位符 | 替换内容     | | —— | ———— | | %d     | 整数         | | %s     | 字符串       | | %f">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python学习（廖雪峰）">
 <meta property="og:url" content="https://hustzyy.github.io/2018/09/09/Python学习（廖雪峰）/index.html">
 <meta property="og:site_name" content="夜未央的博客">
-<meta property="og:description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有： 占位符 | 替换内容 —|— %d | 整数 %s | 字符串 %f | 浮点数 %x | 十六进制整数  采用format()方法   条件判断1234567num =">
+<meta property="og:description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有：  | 占位符 | 替换内容     | | —— | ———— | | %d     | 整数         | | %s     | 字符串       | | %f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-09T04:32:40.179Z">
+<meta property="og:updated_time" content="2018-09-09T04:59:44.710Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python学习（廖雪峰）">
-<meta name="twitter:description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有： 占位符 | 替换内容 —|— %d | 整数 %s | 字符串 %f | 浮点数 %x | 十六进制整数  采用format()方法   条件判断1234567num =">
+<meta name="twitter:description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有：  | 占位符 | 替换内容     | | —— | ———— | | %d     | 整数         | | %s     | 字符串       | | %f">
 
 
 
@@ -335,7 +335,8 @@
         <h2 id="数据格式化"><a href="#数据格式化" class="headerlink" title="数据格式化"></a>数据格式化</h2><ol>
 <li><p>采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(&quot;hello, %s, %d&quot; % (&quot;world&quot;, 2018))</span><br></pre></td></tr></table></figure>
-<p> 常见的占位符有：<br> 占位符 | 替换内容<br> —|—<br> %d | 整数<br> %s | 字符串<br> %f | 浮点数<br> %x | 十六进制整数</p>
+<p> 常见的占位符有：</p>
+<p> | 占位符 | 替换内容     |<br> | —— | ———— |<br> | %d     | 整数         |<br> | %s     | 字符串       |<br> | %f     | 浮点数       |<br> | %x     | 十六进制整数 |</p>
 </li>
 <li><p>采用format()方法</p>
 </li>
@@ -345,10 +346,15 @@
 <h2 id="常用集合"><a href="#常用集合" class="headerlink" title="常用集合"></a>常用集合</h2><ul>
 <li><p><strong>list</strong></p>
 <ul>
-<li>可变长有序集合，可随时添加和删除元素</li>
-<li>用索引来访问list中的元素，起始位0，可以用负索引，-1代表最后一个元素</li>
-<li>list中的元素类型可以不同，如 list = [‘asd’ , 123， True]。其元素也可以是另外一个list</li>
-<li>常用方法：<br>方法名 | 功能<br>—|—<br>append（elem） | 将元素追加到list末尾<br>insert（pos，elem） | 将元素插到指定位置<br>pop（） | 删除list末尾元素<br>pop（pos） | 删除指定位置的元素<br>len（list） | 返回list的长度</li>
+<li><p>可变长有序集合，可随时添加和删除元素</p>
+</li>
+<li><p>用索引来访问list中的元素，起始位0，可以用负索引，-1代表最后一个元素</p>
+</li>
+<li><p>list中的元素类型可以不同，如 list = [‘asd’ , 123， True]。其元素也可以是另外一个list</p>
+</li>
+<li><p>常用方法：</p>
+<p>| 方法名              | 功能                 |<br>| ——————- | ——————– |<br>| append（elem）      | 将元素追加到list末尾 |<br>| insert（pos，elem） | 将元素插到指定位置   |<br>| pop（）             | 删除list末尾元素     |<br>| pop（pos）          | 删除指定位置的元素   |<br>| len（list）         | 返回list的长度       |</p>
+</li>
 </ul>
 </li>
 <li><p><strong>tuple</strong></p>
