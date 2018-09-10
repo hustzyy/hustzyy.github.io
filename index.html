@@ -351,7 +351,7 @@
 </code></pre><h4 id="可迭代对象（iterable）"><a href="#可迭代对象（iterable）" class="headerlink" title="可迭代对象（iterable）"></a>可迭代对象（iterable）</h4><p>凡是定义了返回一个迭代器的—iter—方法，或者定义了可以支持下标索引的—getitem—方法的对象都是可迭代对象。</p>
 <p>例，当运行代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">for</span> elem <span class="keyword">in</span> x:</span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<p>实际的执行情况为：<img src="/2018/09/09/python高级特性/E:/My_Blog\blog\source\_posts\python高级特性\iterable-vs-iterator.png" alt=""><br>常见的可迭代对象如下：</p>
+<p>实际的执行情况为：<img src="/2018/09/09/python高级特性/iterable-vs-iterator.png" alt=""><br>常见的可迭代对象如下：</p>
 <ul>
 <li>集合数据类型：<code>list</code>、<code>tuple</code>、<code>dict</code>、<code>set</code>、<code>str</code>等；</li>
 <li><code>generator</code>，包括生成器和带<code>yield</code>的generator function。</li>
