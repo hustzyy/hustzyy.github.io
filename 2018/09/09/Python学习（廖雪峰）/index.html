@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="夜未央的博客">
 <meta property="og:description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有：  | 占位符 | 替换内容     | | —— | ———— | | %d     | 整数         | | %s     | 字符串       | | %f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-09T14:42:37.761Z">
+<meta property="og:updated_time" content="2018-09-10T06:22:07.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python基础">
 <meta name="twitter:description" content="数据格式化 采用%运算符来格式化字符串，例如：（如果只有一个占位符，括号可以省略）  1print(&amp;quot;hello, %s, %d&amp;quot; % (&amp;quot;world&amp;quot;, 2018))  常见的占位符有：  | 占位符 | 替换内容     | | —— | ———— | | %d     | 整数         | | %s     | 字符串       | | %f">
@@ -407,8 +407,8 @@
 <li><p><strong>默认参数</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">power</span><span class="params">(x, n=<span class="number">2</span>)</span>:</span></span><br><span class="line">    s = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> n &gt; <span class="number">0</span>:</span><br><span class="line">        s *= x</span><br><span class="line">        n -= <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line">print(power(<span class="number">3</span>))</span><br><span class="line">print(power(<span class="number">3</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
 <p>注意点：1. 必选参数在前，默认参数在后</p>
-<p>​        2. 默认参数必须指向不变对象</p>
-</li>
+<pre><code>2. 默认参数必须指向不变对象
+</code></pre></li>
 </ul>
 <ul>
 <li><p><strong>可变参数</strong></p>
