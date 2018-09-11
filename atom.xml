@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hustzyy.github.io/"/>
-  <updated>2018-09-11T16:00:09.394Z</updated>
+  <updated>2018-09-11T16:15:07.217Z</updated>
   <id>https://hustzyy.github.io/</id>
   
   <author>
@@ -21,15 +21,18 @@
     <link href="https://hustzyy.github.io/2018/09/11/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/"/>
     <id>https://hustzyy.github.io/2018/09/11/函数式编程/</id>
     <published>2018-09-11T09:48:58.000Z</published>
-    <updated>2018-09-11T16:00:09.394Z</updated>
+    <updated>2018-09-11T16:15:07.217Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = abs <span class="comment"># </span></span><br><span class="line">print(f(<span class="number">-10</span>))</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul><li><strong>变量指向函数</strong></li></ul><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = abs <span class="comment"># 函数本身也可以赋值给变量，即变量可以指向函数</span></span><br><span class="line">print(f(<span class="number">-10</span>)) <span class="comment"># 变量f已指向abs函数本身，调用f()和调用abs()完全相同</span></span><br></pre></td></tr></table></figure><ul><li><strong>函数名也是变量</strong></li></ul><p>函数名其实就是指向函数的变量！对于<code>abs()</code>这个函数，完全可以把函数名<code>abs</code>看成变量，它指向一个可以计算绝对值的函数！</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">abs = <span class="number">10</span> <span class="comment"># abs变量重新指向一个整数10而不是指向绝对值函数了</span></span><br><span class="line">abs(<span class="number">-10</span>) <span class="comment"># 抛出异常</span></span><br></pre></td></tr></table></figure><ul><li><strong>传入函数</strong></li></ul><p>把函数作为参数传入，这样的函数称为高阶函数，函数式编程就是指这种高度抽象的编程范式。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y, f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> f(x) + f(y)</span><br><span class="line"></span><br><span class="line">print(add(<span class="number">5</span>, <span class="number">-5</span>, abs)) <span class="comment"># 将abs作为参数传入到add函数</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;高阶函数&quot;&gt;&lt;a href=&quot;#高阶函数&quot; class=&quot;headerlink&quot; title=&quot;高阶函数&quot;&gt;&lt;/a&gt;高阶函数&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;p
+        &lt;h2 id=&quot;高阶函数&quot;&gt;&lt;a href=&quot;#高阶函数&quot; class=&quot;headerlink&quot; title=&quot;高阶函数&quot;&gt;&lt;/a&gt;高阶函数&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;变量指向函数&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highli
       
     
     </summary>
