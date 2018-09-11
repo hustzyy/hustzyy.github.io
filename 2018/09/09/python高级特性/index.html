@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="[TOC] 切片123456789101112L = [&apos;John&apos;, &apos;Rose&apos;, 0, 1]print(L[0:4])# L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4# list的切片结果仍为ListT = (&apos;John&apos;, &apos;Rose&apos;, 0, 1)print(T[:4])# tuple的切片结果仍为tuples = &apos;abcdefg&apos;print(str[-3:])#">
+<meta name="description" content="切片123456789101112L = [&apos;John&apos;, &apos;Rose&apos;, 0, 1]print(L[0:4])# L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4# list的切片结果仍为ListT = (&apos;John&apos;, &apos;Rose&apos;, 0, 1)print(T[:4])# tuple的切片结果仍为tuples = &apos;abcdefg&apos;print(str[-3:])# 字符串也可">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python高级特性">
 <meta property="og:url" content="https://hustzyy.github.io/2018/09/09/python高级特性/index.html">
 <meta property="og:site_name" content="夜未央的博客">
-<meta property="og:description" content="[TOC] 切片123456789101112L = [&apos;John&apos;, &apos;Rose&apos;, 0, 1]print(L[0:4])# L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4# list的切片结果仍为ListT = (&apos;John&apos;, &apos;Rose&apos;, 0, 1)print(T[:4])# tuple的切片结果仍为tuples = &apos;abcdefg&apos;print(str[-3:])#">
+<meta property="og:description" content="切片123456789101112L = [&apos;John&apos;, &apos;Rose&apos;, 0, 1]print(L[0:4])# L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4# list的切片结果仍为ListT = (&apos;John&apos;, &apos;Rose&apos;, 0, 1)print(T[:4])# tuple的切片结果仍为tuples = &apos;abcdefg&apos;print(str[-3:])# 字符串也可">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://hustzyy.github.io/2018/09/09/python高级特性/iterable-vs-iterator.png">
 <meta property="og:image" content="https://hustzyy.github.io/2018/09/09/python高级特性/summary.png">
-<meta property="og:updated_time" content="2018-09-11T04:47:31.887Z">
+<meta property="og:updated_time" content="2018-09-11T08:59:04.672Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python高级特性">
-<meta name="twitter:description" content="[TOC] 切片123456789101112L = [&apos;John&apos;, &apos;Rose&apos;, 0, 1]print(L[0:4])# L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4# list的切片结果仍为ListT = (&apos;John&apos;, &apos;Rose&apos;, 0, 1)print(T[:4])# tuple的切片结果仍为tuples = &apos;abcdefg&apos;print(str[-3:])#">
+<meta name="twitter:description" content="切片123456789101112L = [&apos;John&apos;, &apos;Rose&apos;, 0, 1]print(L[0:4])# L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4# list的切片结果仍为ListT = (&apos;John&apos;, &apos;Rose&apos;, 0, 1)print(T[:4])# tuple的切片结果仍为tuples = &apos;abcdefg&apos;print(str[-3:])# 字符串也可">
 <meta name="twitter:image" content="https://hustzyy.github.io/2018/09/09/python高级特性/iterable-vs-iterator.png">
 
 
@@ -308,6 +308,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -335,8 +357,7 @@
       
 
       
-        <p>[TOC]</p>
-<h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">L = [<span class="string">'John'</span>, <span class="string">'Rose'</span>, <span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">print(L[<span class="number">0</span>:<span class="number">4</span>])</span><br><span class="line"><span class="comment"># L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4</span></span><br><span class="line"><span class="comment"># list的切片结果仍为List</span></span><br><span class="line"></span><br><span class="line">T = (<span class="string">'John'</span>, <span class="string">'Rose'</span>, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">print(T[:<span class="number">4</span>])</span><br><span class="line"><span class="comment"># tuple的切片结果仍为tuple</span></span><br><span class="line"></span><br><span class="line">s = <span class="string">'abcdefg'</span></span><br><span class="line">print(str[<span class="number">-3</span>:])</span><br><span class="line"><span class="comment"># 字符串也可以看成一种list，每个元素就是一个字符，切片结果仍是字符串</span></span><br></pre></td></tr></table></figure>
+        <h2 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">L = [<span class="string">'John'</span>, <span class="string">'Rose'</span>, <span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">print(L[<span class="number">0</span>:<span class="number">4</span>])</span><br><span class="line"><span class="comment"># L[0:4]表示从索引0开始取元素，直到索引4为止，但不包括索引4</span></span><br><span class="line"><span class="comment"># list的切片结果仍为List</span></span><br><span class="line"></span><br><span class="line">T = (<span class="string">'John'</span>, <span class="string">'Rose'</span>, <span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">print(T[:<span class="number">4</span>])</span><br><span class="line"><span class="comment"># tuple的切片结果仍为tuple</span></span><br><span class="line"></span><br><span class="line">s = <span class="string">'abcdefg'</span></span><br><span class="line">print(str[<span class="number">-3</span>:])</span><br><span class="line"><span class="comment"># 字符串也可以看成一种list，每个元素就是一个字符，切片结果仍是字符串</span></span><br></pre></td></tr></table></figure>
 <h2 id="迭代"><a href="#迭代" class="headerlink" title="迭代"></a>迭代</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Map = &#123;<span class="string">'one'</span>: <span class="number">1</span>, <span class="string">'two'</span>: <span class="number">2</span>, <span class="string">'three'</span>: <span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">for</span> key <span class="keyword">in</span> Map:</span><br><span class="line">    print(key)</span><br><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> Map.values():</span><br><span class="line">    print(value)</span><br><span class="line"><span class="keyword">for</span> key, value <span class="keyword">in</span> Map.items():</span><br><span class="line">    print(key, <span class="string">':'</span>, value)</span><br></pre></td></tr></table></figure>
 <h2 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">L = [x * x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">11</span>) <span class="keyword">if</span> x % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line">print(L)</span><br><span class="line"><span class="comment"># [4, 16, 36, 64, 100]</span></span><br><span class="line"></span><br><span class="line">comb = [m + n <span class="keyword">for</span> m <span class="keyword">in</span> <span class="string">'ABC'</span> <span class="keyword">for</span> n <span class="keyword">in</span> <span class="string">'XYZ'</span>]</span><br><span class="line">print(comb)</span><br><span class="line"><span class="comment"># ['AX', 'AY', 'AZ', 'BX', 'BY', 'BZ', 'CX', 'CY', 'CZ']</span></span><br></pre></td></tr></table></figure>
 <h2 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h2><p>迭代器是访问集合元素的一种方式，从集合的第一个元素开始，到所有元素被访问完结束。</p>
@@ -510,22 +531,31 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
 
             
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
