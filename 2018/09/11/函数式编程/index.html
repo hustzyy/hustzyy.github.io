@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="夜未央的博客">
 <meta property="og:description" content="高阶函数 变量指向函数  12f = abs # 函数本身也可以赋值给变量，即变量可以指向函数print(f(-10)) # 变量f已指向abs函数本身，调用f()和调用abs()完全相同  函数名也是变量  函数名其实就是指向函数的变量！对于abs()这个函数，完全可以把函数名abs看成变量，它指向一个可以计算绝对值的函数！ 12abs = 10 # abs变量重新指向一个整数10而不是指向绝对">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-11T16:15:07.217Z">
+<meta property="og:updated_time" content="2018-09-12T12:32:03.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数式编程">
 <meta name="twitter:description" content="高阶函数 变量指向函数  12f = abs # 函数本身也可以赋值给变量，即变量可以指向函数print(f(-10)) # 变量f已指向abs函数本身，调用f()和调用abs()完全相同  函数名也是变量  函数名其实就是指向函数的变量！对于abs()这个函数，完全可以把函数名abs看成变量，它指向一个可以计算绝对值的函数！ 12abs = 10 # abs变量重新指向一个整数10而不是指向绝对">
@@ -368,6 +368,16 @@
 </ul>
 <p>把函数作为参数传入，这样的函数称为高阶函数，函数式编程就是指这种高度抽象的编程范式。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add</span><span class="params">(x, y, f)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> f(x) + f(y)</span><br><span class="line"></span><br><span class="line">print(add(<span class="number">5</span>, <span class="number">-5</span>, abs)) <span class="comment"># 将abs作为参数传入到add函数</span></span><br></pre></td></tr></table></figure>
+<h3 id="map-reduce"><a href="#map-reduce" class="headerlink" title="map/reduce"></a>map/reduce</h3><p><code>map()</code>是 Python 内置的高阶函数，接收两个参数，一个是函数，一个是<code>Iterable</code>，<code>map</code>将传入的函数依次作用到序列的每个元素，并把结果作为新的<code>Iterator</code>返回。</p>
+<p><strong>注意 : python 3.x 中map函数返回的是iterators，无法像python2.x 直接返回一个list，故需要再加上一个list()将iterators转化为一个list</strong>。</p>
+<p><code>reduce()</code>的工作过程是 ：在迭代序列(tuple ，list ，dictionary， string等可迭代物)的过程中，首先把前两个元素传给函数参数，函数加工后，然后把得到的结果和第三个元素作为两个参数传给函数参数， 函数加工后得到的结果又和第四个元素作为两个参数传给函数参数，依次类推。 如果传入了 initial 值， 那么首先传的就不是序列的第一个和第二个元素，而是 initial值和第一个元素。<strong>经过这样的累计计算之后合并序列到一个单一返回值。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> reduce</span><br><span class="line"></span><br><span class="line">DIGITS=&#123;<span class="string">'0'</span>: <span class="number">0</span>, <span class="string">'1'</span>: <span class="number">1</span>, <span class="string">'2'</span>: <span class="number">2</span>, <span class="string">'3'</span>: <span class="number">3</span>, <span class="string">'4'</span>: <span class="number">4</span>, <span class="string">'5'</span>: <span class="number">5</span>, <span class="string">'6'</span>: <span class="number">6</span>, <span class="string">'7'</span>: <span class="number">7</span>, <span class="string">'8'</span>: <span class="number">8</span>, <span class="string">'9'</span>: <span class="number">9</span>&#125;</span><br><span class="line"><span class="comment"># 将字符串转化为整数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">strToint</span><span class="params">(str)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">(x, y)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> x * <span class="number">10</span> + y</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">charTonum</span><span class="params">(c)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> DIGITS[c]</span><br><span class="line">    <span class="keyword">return</span> reduce(fn, map(charTonum, str))  </span><br><span class="line"><span class="comment"># map产生一个经过charTonum函数处理过的序列，reduce再用fn函数处理这个序列</span></span><br></pre></td></tr></table></figure>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p><code>filter()</code>和<code>map()</code>类似,也接收一个函数和一个序列。和<code>map()</code>不同的是，<code>filter()</code>把传入的函数依次作用于每个元素，然后根据返回值是<code>True</code>还是<code>False</code>决定保留还是丢弃该元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 过滤偶数，保留奇数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(list(filter(is_odd, range(<span class="number">10</span>))))</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong><code>filter()</code>函数返回的是一个<code>Iterator</code>，也就是一个惰性序列，所以要强迫<code>filter()</code>完成计算结果，需要用<code>list()</code>函数获得所有结果并返回list。</p>
+<h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>当我们在传入函数时有时候不需要显示地定义函数，直接传入匿名函数更方便。例：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list(map(<span class="keyword">lambda</span> x: x * x, range(<span class="number">10</span>)))</span><br><span class="line"><span class="comment"># 匿名函数 lambda x: x * x 际上就是就是：</span></span><br><span class="line"><span class="comment"># def f(x)</span></span><br><span class="line"><span class="comment"># 	  return x * x</span></span><br></pre></td></tr></table></figure>
+<p>关键字<code>lambda</code>表示匿名函数，冒号前面的<code>x</code>表示函数参数。匿名函数有个限制，就是只能有一个表达式，不用写<code>return</code>，返回值就是该表达式的结果。</p>
 
       
     </div>
@@ -407,6 +417,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/12/面向对象编程/" rel="prev" title="面向对象编程">
+                面向对象编程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -487,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -559,7 +573,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶函数"><span class="nav-number">1.</span> <span class="nav-text">高阶函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶函数"><span class="nav-number">1.</span> <span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#map-reduce"><span class="nav-number">1.1.</span> <span class="nav-text">map/reduce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">1.2.</span> <span class="nav-text">filter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-number">2.</span> <span class="nav-text">匿名函数</span></a></li></ol></div>
             
 
           </div>
