@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="高阶函数 变量指向函数  12f = abs # 函数本身也可以赋值给变量，即变量可以指向函数print(f(-10)) # 变量f已指向abs函数本身，调用f()和调用abs()完全相同  函数名也是变量  函数名其实就是指向函数的变量！对于abs()这个函数，完全可以把函数名abs看成变量，它指向一个可以计算绝对值的函数！ 12abs = 10 # abs变量重新指向一个整数10而不是指向绝对">
+<meta name="description" content="简介 函数式编程就是一种抽象程度很高的编程范式，纯粹的函数式编程语言编写的函数没有变量，因此，任意一个函数，只要输入是确定的，输出就是确定的，这种纯函数我们称之为没有副作用。而允许使用变量的程序设计语言，由于函数内部的变量状态不确定，同样的输入，可能得到不同的输出，因此，这种函数是有副作用的。 函数式编程的一个特点就是，允许把函数本身作为参数传入另一个函数，还允许返回一个函数！ Python对函数">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="函数式编程">
 <meta property="og:url" content="https://hustzyy.github.io/2018/09/11/函数式编程/index.html">
 <meta property="og:site_name" content="夜未央的博客">
-<meta property="og:description" content="高阶函数 变量指向函数  12f = abs # 函数本身也可以赋值给变量，即变量可以指向函数print(f(-10)) # 变量f已指向abs函数本身，调用f()和调用abs()完全相同  函数名也是变量  函数名其实就是指向函数的变量！对于abs()这个函数，完全可以把函数名abs看成变量，它指向一个可以计算绝对值的函数！ 12abs = 10 # abs变量重新指向一个整数10而不是指向绝对">
+<meta property="og:description" content="简介 函数式编程就是一种抽象程度很高的编程范式，纯粹的函数式编程语言编写的函数没有变量，因此，任意一个函数，只要输入是确定的，输出就是确定的，这种纯函数我们称之为没有副作用。而允许使用变量的程序设计语言，由于函数内部的变量状态不确定，同样的输入，可能得到不同的输出，因此，这种函数是有副作用的。 函数式编程的一个特点就是，允许把函数本身作为参数传入另一个函数，还允许返回一个函数！ Python对函数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-12T12:32:03.788Z">
+<meta property="og:updated_time" content="2018-09-12T13:41:32.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数式编程">
-<meta name="twitter:description" content="高阶函数 变量指向函数  12f = abs # 函数本身也可以赋值给变量，即变量可以指向函数print(f(-10)) # 变量f已指向abs函数本身，调用f()和调用abs()完全相同  函数名也是变量  函数名其实就是指向函数的变量！对于abs()这个函数，完全可以把函数名abs看成变量，它指向一个可以计算绝对值的函数！ 12abs = 10 # abs变量重新指向一个整数10而不是指向绝对">
+<meta name="twitter:description" content="简介 函数式编程就是一种抽象程度很高的编程范式，纯粹的函数式编程语言编写的函数没有变量，因此，任意一个函数，只要输入是确定的，输出就是确定的，这种纯函数我们称之为没有副作用。而允许使用变量的程序设计语言，由于函数内部的变量状态不确定，同样的输入，可能得到不同的输出，因此，这种函数是有副作用的。 函数式编程的一个特点就是，允许把函数本身作为参数传入另一个函数，还允许返回一个函数！ Python对函数">
 
 
 
@@ -354,7 +354,12 @@
       
 
       
-        <h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li>函数式编程就是一种抽象程度很高的<strong>编程范式</strong>，纯粹的函数式编程语言编写的函数没有变量，因此，任意一个函数，只要输入是确定的，输出就是确定的，这种纯函数我们称之为没有副作用。而允许使用变量的程序设计语言，由于函数内部的变量状态不确定，同样的输入，可能得到不同的输出，因此，这种函数是有副作用的。</li>
+<li>函数式编程的一个特点就是，允许把函数本身作为参数传入另一个函数，还允许返回一个函数！</li>
+<li>Python对函数式编程提供部分支持。由于Python允许使用变量，因此，Python不是纯函数式编程语言。</li>
+</ul>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><ul>
 <li><strong>变量指向函数</strong></li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">f = abs <span class="comment"># 函数本身也可以赋值给变量，即变量可以指向函数</span></span><br><span class="line">print(f(<span class="number">-10</span>)) <span class="comment"># 变量f已指向abs函数本身，调用f()和调用abs()完全相同</span></span><br></pre></td></tr></table></figure>
@@ -375,6 +380,9 @@
 <h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p><code>filter()</code>和<code>map()</code>类似,也接收一个函数和一个序列。和<code>map()</code>不同的是，<code>filter()</code>把传入的函数依次作用于每个元素，然后根据返回值是<code>True</code>还是<code>False</code>决定保留还是丢弃该元素。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 过滤偶数，保留奇数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(list(filter(is_odd, range(<span class="number">10</span>))))</span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong><code>filter()</code>函数返回的是一个<code>Iterator</code>，也就是一个惰性序列，所以要强迫<code>filter()</code>完成计算结果，需要用<code>list()</code>函数获得所有结果并返回list。</p>
+<h2 id="返回函数"><a href="#返回函数" class="headerlink" title="返回函数"></a>返回函数</h2><p>高阶函数除了可以接受函数作为参数外，还可以把函数作为结果值返回。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">lazy_sum</span><span class="params">(*args)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">sum</span><span class="params">()</span>:</span>         <span class="comment"># 内部函数sum可以引用外部函数lazy_sum的参数和局部变量</span></span><br><span class="line">        count = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> args:</span><br><span class="line">            count += x</span><br><span class="line">        <span class="keyword">return</span> count</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line"></span><br><span class="line">f = lazy_sum(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)  <span class="comment"># 调用lazy_sum()时，返回的不是求和结果，而是求和函数</span></span><br></pre></td></tr></table></figure>
+<p>当<code>lazy_sum</code>返回函数<code>sum</code>时，相关参数和变量都保存在返回的函数中，这称为“闭包（Closure）”程序结构。</p>
 <h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2><p>当我们在传入函数时有时候不需要显示地定义函数，直接传入匿名函数更方便。例：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list(map(<span class="keyword">lambda</span> x: x * x, range(<span class="number">10</span>)))</span><br><span class="line"><span class="comment"># 匿名函数 lambda x: x * x 际上就是就是：</span></span><br><span class="line"><span class="comment"># def f(x)</span></span><br><span class="line"><span class="comment"># 	  return x * x</span></span><br></pre></td></tr></table></figure>
 <p>关键字<code>lambda</code>表示匿名函数，冒号前面的<code>x</code>表示函数参数。匿名函数有个限制，就是只能有一个表达式，不用写<code>return</code>，返回值就是该表达式的结果。</p>
@@ -573,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶函数"><span class="nav-number">1.</span> <span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#map-reduce"><span class="nav-number">1.1.</span> <span class="nav-text">map/reduce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">1.2.</span> <span class="nav-text">filter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-number">2.</span> <span class="nav-text">匿名函数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶函数"><span class="nav-number">2.</span> <span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#map-reduce"><span class="nav-number">2.1.</span> <span class="nav-text">map/reduce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">2.2.</span> <span class="nav-text">filter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#返回函数"><span class="nav-number">3.</span> <span class="nav-text">返回函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-number">4.</span> <span class="nav-text">匿名函数</span></a></li></ol></div>
             
 
           </div>
