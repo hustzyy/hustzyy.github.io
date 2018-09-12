@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/python类/" itemprop="url" rel="index">
+                    <span itemprop="name">python类</span>
                   </a>
                 </span>
 
@@ -354,7 +354,12 @@
       
         
           
-            
+            <h2 id="类定义"><a href="#类定义" class="headerlink" title="类定义"></a>类定义</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">People</span>:</span></span><br><span class="line">    <span class="comment"># 定义类的基本属性</span></span><br><span class="line">    name = <span class="string">''</span></span><br><span class="line">    age = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 定义类的私有属性，私有属性在类外部无法访问</span></span><br><span class="line">    _weight = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定义构造方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age, weight)</span>:</span></span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self._weight = weight</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 私有属性可以通过调用类方法来访问</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get_weight</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self._weight</span><br><span class="line">    </span><br><span class="line">    <span class="comment">#类方法必须包含参数self，且为第一个参数</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">speak</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'People'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实例化类对象</span></span><br><span class="line">that = People(<span class="string">'Rose'</span>, <span class="number">18</span>, <span class="number">100</span>)</span><br><span class="line">print(<span class="string">'%s: %d, %d'</span> % (that.name, that.age, that.get_weight()))</span><br></pre></td></tr></table></figure>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ul>
+<li><strong>单继承</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(People)</span>:</span>  <span class="comment"># ()内为继承的类名</span></span><br><span class="line">    grade = <span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age, weight, grade)</span>:</span></span><br><span class="line">        People.__init__(self, name, age, weight)  <span class="comment"># 调用父类的构造函数</span></span><br><span class="line">        self.grade = grade</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写父类方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">speak</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'Student'</span>)</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -893,7 +898,7 @@
 <ul>
 <li><p>元组，有序列表，初始化之后不可修改，如 t = （’a’, ‘b’, ‘c’）</p>
 </li>
-<li><p>表面变化：t = （’a’, ‘b’, [‘A’, ‘B’]），可以给t[2][0]和t[2][1]重新赋值，实际上t[2]的值并没有变，仍然是list在堆内存中的地址，但list中存的值改变了</p>
+<li><p>表面变化：t = （’a’, ‘b’, [‘A’, ‘B’]），可以给<code>t[2][0]</code>和<code>t[2][1]</code>重新赋值，实际上t[2]的值并没有变，仍然是list在堆内存中的地址，但list中存的值改变了</p>
 </li>
 </ul>
 </li>
@@ -941,6 +946,8 @@
 <p>注意点：1. 必选参数在前，默认参数在后</p>
 <pre><code>2. 默认参数必须指向不变对象
 </code></pre></li>
+</ul>
+<ul>
 <li><p><strong>可变参数</strong></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 可变参数允许你传入0个或任意个参数，这些可变参数在函数调用时自动组装成一个tuple</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">var_para</span><span class="params">(*numbers)</span>:</span></span><br><span class="line">    count = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> n <span class="keyword">in</span> numbers:</span><br><span class="line">        count += n</span><br><span class="line">    <span class="keyword">return</span> count</span><br><span class="line"></span><br><span class="line">print(var_para(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))</span><br><span class="line">print(var_para()) </span><br><span class="line"></span><br><span class="line">nums = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">print(var_para(*nums))</span><br></pre></td></tr></table></figure>
 </li>
@@ -1044,7 +1051,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
