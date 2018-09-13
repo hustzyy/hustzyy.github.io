@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="夜未央的博客">
 <meta property="og:description" content="类定义123456789101112131415161718192021222324class People:    # 定义类的基本属性    name = &apos;&apos;    age = 0    # 定义类的私有属性，私有属性在类外部无法访问    _weight = 0    # 定义构造方法    def __init__(self, name, age, weight):        sel">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-12T16:26:10.940Z">
+<meta property="og:updated_time" content="2018-09-13T07:25:11.470Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面向对象编程">
 <meta name="twitter:description" content="类定义123456789101112131415161718192021222324class People:    # 定义类的基本属性    name = &apos;&apos;    age = 0    # 定义类的私有属性，私有属性在类外部无法访问    _weight = 0    # 定义构造方法    def __init__(self, name, age, weight):        sel">
@@ -317,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python类/" itemprop="url" rel="index">
-                    <span itemprop="name">python类</span>
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
                   </a>
                 </span>
 
@@ -359,6 +359,11 @@
 <li><strong>单继承</strong></li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(People)</span>:</span>  <span class="comment"># ()内为继承的类名</span></span><br><span class="line">    grade = <span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, name, age, weight, grade)</span>:</span></span><br><span class="line">        People.__init__(self, name, age, weight)  <span class="comment"># 调用父类的构造函数</span></span><br><span class="line">        self.grade = grade</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 重写父类方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">speak</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'Student'</span>)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>多继承</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DerivedClassName</span><span class="params">(Base1, Base2, Base3)</span>:</span></span><br><span class="line">    &lt;statement<span class="number">-1</span>&gt;</span><br><span class="line">    .</span><br><span class="line">    .</span><br><span class="line">    &lt;statement-N&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>若是父类中有相同的方法名，而在子类使用时未指定，从左到右查找父类中是否包含方法，选用较左边的父类继承过来的方法。</p>
 
       
     </div>
@@ -398,6 +403,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/09/13/IO编程/" rel="prev" title="IO编程">
+                IO编程 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -478,7 +487,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -489,7 +498,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
