@@ -89,13 +89,10 @@
 <meta property="og:site_name" content="夜未央的博客">
 <meta property="og:description" content="线性回归假设特征和结果满足线性关系。其实线性关系的表达能力非常强大，每个特征对结果的影响强弱可以由前面的参数体现，而且每个特征变量可以首先映射到一个函数，然后再参与线性计算。这样就可以表达特征与结果之间的非线性关系。   预测 y 值和真实 y 值之间的差值，使用该误差的简单累加将使得正差值和负差值相互抵消，所以一般采用平方误差（最小二乘法）   岭回归：是一种专用于共线性数据分析的有偏估计回归">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D130/sign=2f7a82fb6c09c93d03f20af4af3cf8bb/d043ad4bd11373f0646fa76aaf0f4bfbfaed04f7.jpg">
-<meta property="og:image" content="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D186/sign=de5f62f8f3dcd100c99cfc29448a47be/c995d143ad4bd11396687fc751afa40f4afb059a.jpg">
-<meta property="og:updated_time" content="2018-10-02T14:32:23.751Z">
+<meta property="og:updated_time" content="2018-10-02T14:37:48.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Regression">
 <meta name="twitter:description" content="线性回归假设特征和结果满足线性关系。其实线性关系的表达能力非常强大，每个特征对结果的影响强弱可以由前面的参数体现，而且每个特征变量可以首先映射到一个函数，然后再参与线性计算。这样就可以表达特征与结果之间的非线性关系。   预测 y 值和真实 y 值之间的差值，使用该误差的简单累加将使得正差值和负差值相互抵消，所以一般采用平方误差（最小二乘法）   岭回归：是一种专用于共线性数据分析的有偏估计回归">
-<meta name="twitter:image" content="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D130/sign=2f7a82fb6c09c93d03f20af4af3cf8bb/d043ad4bd11373f0646fa76aaf0f4bfbfaed04f7.jpg">
 
 
 
@@ -364,13 +361,10 @@
 <li>预测 y 值和真实 y 值之间的差值，使用该误差的简单累加将使得正差值和负差值相互抵消，所以一般采用平方误差（最小二乘法）</li>
 </ul>
 <ul>
-<li><p>岭回归：是一种专用于共线性数据分析的有偏估计回归方法，实质上是一种改良的最小二乘估计法，通过放弃最小二乘法的无偏性，以损失部分信息、降低精度为代价获得<a href="https://baike.baidu.com/item/%E5%9B%9E%E5%BD%92%E7%B3%BB%E6%95%B0/10840879" target="_blank" rel="noopener">回归系数</a>更为符合实际、更可靠的回归方法，对病态数据的拟合要强于<a href="https://baike.baidu.com/item/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/2522346" target="_blank" rel="noopener">最小二乘法</a>。</p>
-<p><img src="https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D130/sign=2f7a82fb6c09c93d03f20af4af3cf8bb/d043ad4bd11373f0646fa76aaf0f4bfbfaed04f7.jpg" alt="img"></p>
-<pre><code>![img](https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D46/sign=dc2d61142d2eb938e86d7bf4d76227c0/0824ab18972bd407bd30b10879899e510eb3094b.jpg) 
-</code></pre><p><img src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D186/sign=de5f62f8f3dcd100c99cfc29448a47be/c995d143ad4bd11396687fc751afa40f4afb059a.jpg" alt="img"></p>
-</li>
-<li><p>Lasso：Lasso回归于岭回归非常相似，它们的差别在于使用了不同的正则化项。最终都实现了约束参数从而防止过拟合的效果。但是Lasso之所以重要，还有另一个原因是：Lasso能够将一些作用比较小的特征的参数训练为0，从而获得稀疏解。也就是说用这种方法，在训练模型的过程中实现了降维(特征筛选)的目的。</p>
-</li>
+<li>岭回归：是一种专用于共线性数据分析的有偏估计回归方法，实质上是一种改良的最小二乘估计法，通过放弃最小二乘法的无偏性，以损失部分信息、降低精度为代价获得<a href="https://baike.baidu.com/item/%E5%9B%9E%E5%BD%92%E7%B3%BB%E6%95%B0/10840879" target="_blank" rel="noopener">回归系数</a>更为符合实际、更可靠的回归方法，对病态数据的拟合要强于<a href="https://baike.baidu.com/item/%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/2522346" target="_blank" rel="noopener">最小二乘法</a>。</li>
+</ul>
+<ul>
+<li>Lasso：Lasso回归于岭回归非常相似，它们的差别在于使用了不同的正则化项。最终都实现了约束参数从而防止过拟合的效果。但是Lasso之所以重要，还有另一个原因是：Lasso能够将一些作用比较小的特征的参数训练为0，从而获得稀疏解。也就是说用这种方法，在训练模型的过程中实现了降维(特征筛选)的目的。</li>
 </ul>
 <ul>
 <li><a href="https://www.cnblogs.com/Belter/p/8536939.html" target="_blank" rel="noopener">https://www.cnblogs.com/Belter/p/8536939.html</a></li>
