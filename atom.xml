@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hustzyy.github.io/"/>
-  <updated>2018-10-02T14:37:48.467Z</updated>
+  <updated>2018-10-05T07:56:33.039Z</updated>
   <id>https://hustzyy.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ensemble learning</title>
+    <link href="https://hustzyy.github.io/2018/10/05/ensemble-learning/"/>
+    <id>https://hustzyy.github.io/2018/10/05/ensemble-learning/</id>
+    <published>2018-10-05T07:51:41.000Z</published>
+    <updated>2018-10-05T07:56:33.039Z</updated>
+    
+    <content type="html"><![CDATA[<p>核心：个体学习器要具有<strong>准确性</strong>、<strong>多样性</strong></p><p><img src="/2018/10/05/ensemble-learning/ensemble.PNG" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;核心：个体学习器要具有&lt;strong&gt;准确性&lt;/strong&gt;、&lt;strong&gt;多样性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2018/10/05/ensemble-learning/ensemble.PNG&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://hustzyy.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="集成学习" scheme="https://hustzyy.github.io/tags/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>Regression</title>
