@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hustzyy.github.io/"/>
-  <updated>2018-10-05T07:56:33.039Z</updated>
+  <updated>2018-10-11T01:45:37.394Z</updated>
   <id>https://hustzyy.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阶段总结</title>
+    <link href="https://hustzyy.github.io/2018/10/11/%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/"/>
+    <id>https://hustzyy.github.io/2018/10/11/阶段总结/</id>
+    <published>2018-10-11T01:03:56.000Z</published>
+    <updated>2018-10-11T01:45:37.394Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2018-9-3-–-2018-10-10"><a href="#2018-9-3-–-2018-10-10" class="headerlink" title="2018.9.3 – 2018.10.10"></a>2018.9.3 – 2018.10.10</h1><h4 id="学了什么："><a href="#学了什么：" class="headerlink" title="学了什么："></a>学了什么：</h4><ol><li>吴恩达机器学习</li><li>在西瓜书和统计学习方法中选看了对应NG课程中的章节</li><li>python3基础</li><li>numpy、pandas包的基本使用</li><li>使用sklearn中的ML算法（网课）</li></ol><h4 id="学得怎么样："><a href="#学得怎么样：" class="headerlink" title="学得怎么样："></a>学得怎么样：</h4><ul><li>有点迷，觉得有不少东西似懂非懂</li><li>学得很急躁，不少算法背后的数学原理没有搞透彻（目前只记得高数和线代的知识了，概率论与数理统计都还给老师了）</li><li>并没有复现NG课程中的所有算法，特别是在接触sklearn后就开始调包了（觉得这样无益于理解）</li></ul><h4 id="怎么办："><a href="#怎么办：" class="headerlink" title="怎么办："></a>怎么办：</h4><p>​    可能由于明年5月份左右就要找实习了，所以心里比较着急，并没有把一些东西都学踏实了。打算下一阶段先补上数学基础，再复习学过的东西，系统地看一下西瓜书和统计学习方法，并且将其中的算法实现（目标12月前结束，然后就要准备期末考试了emmm）</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;2018-9-3-–-2018-10-10&quot;&gt;&lt;a href=&quot;#2018-9-3-–-2018-10-10&quot; class=&quot;headerlink&quot; title=&quot;2018.9.3 – 2018.10.10&quot;&gt;&lt;/a&gt;2018.9.3 – 2018.10.10&lt;/
+      
+    
+    </summary>
+    
+      <category term="emmmm" scheme="https://hustzyy.github.io/categories/emmmm/"/>
+    
+    
+      <category term="计划" scheme="https://hustzyy.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
   
   <entry>
     <title>ensemble learning</title>
