@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hustzyy.github.io/"/>
-  <updated>2018-10-11T03:10:33.352Z</updated>
+  <updated>2018-10-12T12:19:29.751Z</updated>
   <id>https://hustzyy.github.io/</id>
   
   <author>
@@ -17,13 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>one-hot</title>
+    <link href="https://hustzyy.github.io/2018/10/12/one-hot/"/>
+    <id>https://hustzyy.github.io/2018/10/12/one-hot/</id>
+    <published>2018-10-12T11:31:30.000Z</published>
+    <updated>2018-10-12T12:19:29.751Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="数据预处理之独热编码"><a href="#数据预处理之独热编码" class="headerlink" title="数据预处理之独热编码"></a>数据预处理之独热编码</h2><h4 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h4><pre><code>**在很多机器学习任务中，特征并不总是连续值，而可能是分类值。**例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, &apos;Q&apos;, &apos;C&apos;}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  &apos;Q&apos;：2,  &apos;C&apos;：3}可以将三个不同类别映射为数字），效率会提高很多。那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数据数据是连续的，并且是有序的。但是，按照我们上述的表示，数字并不是有序的，而是随机分配的。为了解决以上问题，一种解决方案就是采用独热编码。独热编码即 One-Hot 编码，又称一位有效编码，其方法是使用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候，其中只有一位有效。</code></pre><p>例如：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">自然状态码：1， 2， 3， 4， 5</span><br><span class="line">独热编码：00001， 00010， 00100， 01000， 10000</span><br></pre></td></tr></table></figure><h4 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h4><p>​    使用one-hot编码，<strong>将离散特征的取值扩展到了欧式空间</strong>，离散特征的某个取值就对应欧式空间的某个点。又因为在回归，分类，聚类等机器学习算法中，特征之间距离的计算或相似度的计算是非常重要的，而我们常用的距离或相似度的计算都是在欧式空间的相似度计算，计算余弦相似性，基于的就是欧式空间。所以将离散型特征使用one-hot编码，会让特征之间的距离计算更加合理。</p><pre><code>比如，有一个离散型特征，代表工作类型，该离散型特征，共有三个取值，不使用one-hot编码，其表示分别是x_1 = (1), x_2 = (2), x_3 = (3)。两个工作之间的距离是，(x_1, x_2) = 1, d(x_2, x_3) = 1, d(x_1, x_3) = 2。那么x_1和x_3工作之间就越不相似吗？显然这样的表示，计算出来的特征的距离是不合理。那如果使用one-hot编码，则得到x_1 = (1, 0, 0), x_2 = (0, 1, 0), x_3 = (0, 0, 1)，那么两个工作之间的距离就都是sqrt(2).即每两个工作之间的距离是一样的，显得更合理。</code></pre><h4 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h4><pre><code>离散特征进行one-hot编码后，编码后的特征每一维度的特征都可以看做是连续的特征。就可以跟对连续型特征的归一化方法一样，对每一维特征进行归一化。</code></pre><h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol><li><p>one-hot既能在一定程度上也起到了扩充特征的作用，也可能引发<strong>维度灾难</strong>问题。</p></li><li><p>Tree Model不太需要one-hot编码。（一般基于树的方法不需要进行数据归一化处理，基于参数或者基于距离的模型才要进行特征归一化）</p><ul><li>对于决策树来说，one-hot的本质是增加树的深度， tree-model是在动态的过程中生成类似 One-Hot + Feature Crossing 的机制 。</li><li>决策树是没有特征大小的概念的，只有特征处于他分布的哪一部分的概念 。</li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;数据预处理之独热编码&quot;&gt;&lt;a href=&quot;#数据预处理之独热编码&quot; class=&quot;headerlink&quot; title=&quot;数据预处理之独热编码&quot;&gt;&lt;/a&gt;数据预处理之独热编码&lt;/h2&gt;&lt;h4 id=&quot;背景：&quot;&gt;&lt;a href=&quot;#背景：&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="机器学习" scheme="https://hustzyy.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="编码" scheme="https://hustzyy.github.io/tags/%E7%BC%96%E7%A0%81/"/>
+    
+      <category term="机器学习" scheme="https://hustzyy.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="特征处理" scheme="https://hustzyy.github.io/tags/%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阶段总结</title>
     <link href="https://hustzyy.github.io/2018/10/11/%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/"/>
     <id>https://hustzyy.github.io/2018/10/11/阶段总结/</id>
     <published>2018-10-11T01:03:56.000Z</published>
-    <updated>2018-10-11T03:10:33.352Z</updated>
+    <updated>2018-10-12T08:33:40.832Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="2018-9-3-–-2018-10-10"><a href="#2018-9-3-–-2018-10-10" class="headerlink" title="2018.9.3 – 2018.10.10"></a>2018.9.3 – 2018.10.10</h1><h4 id="学了什么："><a href="#学了什么：" class="headerlink" title="学了什么："></a>学了什么：</h4><ol><li>吴恩达机器学习</li><li>在西瓜书和统计学习方法中选看了对应NG课程中的章节</li><li>python3基础</li><li>numpy、pandas包的基本使用</li><li>使用sklearn中的ML算法（网课）</li></ol><h4 id="学得怎么样："><a href="#学得怎么样：" class="headerlink" title="学得怎么样："></a>学得怎么样：</h4><ul><li>有点迷，觉得有不少东西似懂非懂</li><li>学得很急躁，不少算法背后的数学原理没有搞透彻（目前只记得高数和线代的知识了，概率论与数理统计都还给老师了）</li><li>并没有复现NG课程中的所有算法，特别是在接触sklearn后就开始调包了（觉得这样无益于理解）</li></ul><h4 id="怎么办："><a href="#怎么办：" class="headerlink" title="怎么办："></a>怎么办：</h4><p>​    可能由于明年5月份左右就要找实习了，所以心里比较着急，并没有把一些东西都学踏实了。所以重新规划阶段目标：</p><ol><li>补上数学基础</li><li>复习NG的课程，学习林轩台的课程（配合统计学习方法一起食用）</li><li>系统地看一遍西瓜书</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="2018-9-3-–-2018-10-10"><a href="#2018-9-3-–-2018-10-10" class="headerlink" title="2018.9.3 – 2018.10.10"></a>2018.9.3 – 2018.10.10</h1><h4 id="学了什么："><a href="#学了什么：" class="headerlink" title="学了什么："></a>学了什么：</h4><ol><li>吴恩达机器学习</li><li>在西瓜书和统计学习方法中选看了对应NG课程中的章节</li><li>python3基础</li><li>numpy、pandas包的基本使用</li><li>使用sklearn中的ML算法（网课）</li></ol><h4 id="学得怎么样："><a href="#学得怎么样：" class="headerlink" title="学得怎么样："></a>学得怎么样：</h4><ul><li>有点迷，觉得有不少东西似懂非懂</li><li>学得很急躁，不少算法背后的数学原理没有搞透彻（目前只记得高数和线代的知识了，概率论与数理统计都还给老师了）</li><li>并没有复现NG课程中的所有算法，特别是在接触sklearn后就开始调包了（觉得这样无益于理解）</li></ul><h4 id="怎么办："><a href="#怎么办：" class="headerlink" title="怎么办："></a>怎么办：</h4><p>​    可能由于明年5月份左右就要找实习了，所以心里比较着急，并没有把一些东西都学踏实了。所以重新规划阶段目标：</p><ol><li>补上数学基础</li><li>复习NG的课程</li><li>系统地看一遍西瓜书和统计学习方法（推导、实现）</li></ol>]]></content>
     
     <summary type="html">
     
