@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="编码,机器学习,特征处理," />
+  <meta name="keywords" content="编码,离散特征处理," />
 
 
 
@@ -82,14 +82,14 @@
 
 
 <meta name="description" content="数据预处理之独热编码背景：在很多机器学习任务中，特征并不总是连续值，而可能是分类值。 例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, ‘Q’, ‘C’}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  ‘Q’：2,  ‘C’：3}可以将三个不同类别映射为数字），效率会提高很多。 那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数">
-<meta name="keywords" content="编码,机器学习,特征处理">
+<meta name="keywords" content="编码,离散特征处理">
 <meta property="og:type" content="article">
 <meta property="og:title" content="one-hot">
 <meta property="og:url" content="https://hustzyy.github.io/2018/10/12/one-hot/index.html">
 <meta property="og:site_name" content="夜未央的博客">
 <meta property="og:description" content="数据预处理之独热编码背景：在很多机器学习任务中，特征并不总是连续值，而可能是分类值。 例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, ‘Q’, ‘C’}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  ‘Q’：2,  ‘C’：3}可以将三个不同类别映射为数字），效率会提高很多。 那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-12T12:27:54.172Z">
+<meta property="og:updated_time" content="2018-10-16T14:41:51.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="one-hot">
 <meta name="twitter:description" content="数据预处理之独热编码背景：在很多机器学习任务中，特征并不总是连续值，而可能是分类值。 例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, ‘Q’, ‘C’}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  ‘Q’：2,  ‘C’：3}可以将三个不同类别映射为数字），效率会提高很多。 那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数">
@@ -365,7 +365,7 @@
 <h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
 <li><p>one-hot既能在一定程度上也起到了扩充特征的作用，也可能引发<strong>维度灾难</strong>问题。</p>
 </li>
-<li><p>Tree Model不太需要one-hot编码。（一般基于树的方法不需要进行数据归一化处理，基于参数或者基于距离的模型才要进行特征归一化）</p>
+<li><p>Tree Model不太需要one-hot编码。（一般非参数模型不需要进行数据归一化处理（如随机森林），基于参数或者基于距离的模型才要进行特征归一化）</p>
 <ul>
 <li>对于决策树来说，one-hot的本质是增加树的深度， tree-model是在动态的过程中生成类似 One-Hot + Feature Crossing 的机制 。</li>
 <li>决策树是没有特征大小的概念的，只有特征处于他分布的哪一部分的概念 。</li>
@@ -391,9 +391,7 @@
           
             <a href="/tags/编码/" rel="tag"># 编码</a>
           
-            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
-          
-            <a href="/tags/特征处理/" rel="tag"># 特征处理</a>
+            <a href="/tags/离散特征处理/" rel="tag"># 离散特征处理</a>
           
         </div>
       
@@ -517,7 +515,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

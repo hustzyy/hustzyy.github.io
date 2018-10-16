@@ -365,7 +365,7 @@
 <h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
 <li><p>one-hot既能在一定程度上也起到了扩充特征的作用，也可能引发<strong>维度灾难</strong>问题。</p>
 </li>
-<li><p>Tree Model不太需要one-hot编码。（一般基于树的方法不需要进行数据归一化处理，基于参数或者基于距离的模型才要进行特征归一化）</p>
+<li><p>Tree Model不太需要one-hot编码。（一般非参数模型不需要进行数据归一化处理（如随机森林），基于参数或者基于距离的模型才要进行特征归一化）</p>
 <ul>
 <li>对于决策树来说，one-hot的本质是增加树的深度， tree-model是在动态的过程中生成类似 One-Hot + Feature Crossing 的机制 。</li>
 <li>决策树是没有特征大小的概念的，只有特征处于他分布的哪一部分的概念 。</li>
@@ -1980,7 +1980,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
