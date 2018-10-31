@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hustzyy.github.io/"/>
-  <updated>2018-10-16T14:41:51.631Z</updated>
+  <updated>2018-10-31T08:53:04.535Z</updated>
   <id>https://hustzyy.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>10月总结</title>
+    <link href="https://hustzyy.github.io/2018/10/31/10%E6%9C%88%E6%80%BB%E7%BB%93/"/>
+    <id>https://hustzyy.github.io/2018/10/31/10月总结/</id>
+    <published>2018-10-31T08:34:07.000Z</published>
+    <updated>2018-10-31T08:53:04.535Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="2018-10-11-–-2018-10-31"><a href="#2018-10-11-–-2018-10-31" class="headerlink" title="2018.10.11 – 2018.10.31"></a>2018.10.11 – 2018.10.31</h1><h4 id="学了什么："><a href="#学了什么：" class="headerlink" title="学了什么："></a>学了什么：</h4><ol><li>复习了线性代数和概率论基础</li><li>复习了NG的课程</li><li>统计学习方法（80%）</li><li>刘建平的ML博文（47/69）</li></ol><h4 id="学得如何："><a href="#学得如何：" class="headerlink" title="学得如何："></a>学得如何：</h4><ul><li>算法的数学原理和伪代码基本可以手撸出来，但对于各个算法间的区别和联系及其应用场景理解不太行</li><li>本月学得东西比较少，大部分时间都看比赛去了，看着17战队频频失误，RNG止步八强真的有点糟心</li></ul><h4 id="下个月计划："><a href="#下个月计划：" class="headerlink" title="下个月计划："></a>下个月计划：</h4><ol><li>看完统计学习方法</li><li>过一遍python数据分析</li><li>学习xgb、lgb的原理及应用</li><li>高等工程数学（逃课这么久，再不学挂科了）</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;2018-10-11-–-2018-10-31&quot;&gt;&lt;a href=&quot;#2018-10-11-–-2018-10-31&quot; class=&quot;headerlink&quot; title=&quot;2018.10.11 – 2018.10.31&quot;&gt;&lt;/a&gt;2018.10.11 – 2018
+      
+    
+    </summary>
+    
+      <category term="emmmm" scheme="https://hustzyy.github.io/categories/emmmm/"/>
+    
+    
+      <category term="总结" scheme="https://hustzyy.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>one-hot</title>
@@ -48,7 +73,7 @@
     <link href="https://hustzyy.github.io/2018/10/11/%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93/"/>
     <id>https://hustzyy.github.io/2018/10/11/阶段总结/</id>
     <published>2018-10-11T01:03:56.000Z</published>
-    <updated>2018-10-12T08:33:40.832Z</updated>
+    <updated>2018-10-31T08:35:38.314Z</updated>
     
     <content type="html"><![CDATA[<h1 id="2018-9-3-–-2018-10-10"><a href="#2018-9-3-–-2018-10-10" class="headerlink" title="2018.9.3 – 2018.10.10"></a>2018.9.3 – 2018.10.10</h1><h4 id="学了什么："><a href="#学了什么：" class="headerlink" title="学了什么："></a>学了什么：</h4><ol><li>吴恩达机器学习</li><li>在西瓜书和统计学习方法中选看了对应NG课程中的章节</li><li>python3基础</li><li>numpy、pandas包的基本使用</li><li>使用sklearn中的ML算法（网课）</li></ol><h4 id="学得怎么样："><a href="#学得怎么样：" class="headerlink" title="学得怎么样："></a>学得怎么样：</h4><ul><li>有点迷，觉得有不少东西似懂非懂</li><li>学得很急躁，不少算法背后的数学原理没有搞透彻（目前只记得高数和线代的知识了，概率论与数理统计都还给老师了）</li><li>并没有复现NG课程中的所有算法，特别是在接触sklearn后就开始调包了（觉得这样无益于理解）</li></ul><h4 id="怎么办："><a href="#怎么办：" class="headerlink" title="怎么办："></a>怎么办：</h4><p>​    可能由于明年5月份左右就要找实习了，所以心里比较着急，并没有把一些东西都学踏实了。所以重新规划阶段目标：</p><ol><li>补上数学基础</li><li>复习NG的课程</li><li>系统地看一遍西瓜书和统计学习方法（推导、实现）</li></ol>]]></content>
     
@@ -64,7 +89,7 @@
       <category term="emmmm" scheme="https://hustzyy.github.io/categories/emmmm/"/>
     
     
-      <category term="计划" scheme="https://hustzyy.github.io/tags/%E8%AE%A1%E5%88%92/"/>
+      <category term="总结" scheme="https://hustzyy.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

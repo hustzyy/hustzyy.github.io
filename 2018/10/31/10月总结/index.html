@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="编码,离散特征处理," />
+  <meta name="keywords" content="总结," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="数据预处理之独热编码背景：在很多机器学习任务中，特征并不总是连续值，而可能是分类值。 例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, ‘Q’, ‘C’}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  ‘Q’：2,  ‘C’：3}可以将三个不同类别映射为数字），效率会提高很多。 那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数">
-<meta name="keywords" content="编码,离散特征处理">
+<meta name="description" content="2018.10.11 – 2018.10.31学了什么： 复习了线性代数和概率论基础 复习了NG的课程 统计学习方法（80%） 刘建平的ML博文（47/69）  学得如何： 算法的数学原理和伪代码基本可以手撸出来，但对于各个算法间的区别和联系及其应用场景理解不太行 本月学得东西比较少，大部分时间都看比赛去了，看着17战队频频失误，RNG止步八强真的有点糟心  下个月计划： 看完统计学习方法 过一遍">
+<meta name="keywords" content="总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="one-hot">
-<meta property="og:url" content="https://hustzyy.github.io/2018/10/12/one-hot/index.html">
+<meta property="og:title" content="10月总结">
+<meta property="og:url" content="https://hustzyy.github.io/2018/10/31/10月总结/index.html">
 <meta property="og:site_name" content="夜未央的博客">
-<meta property="og:description" content="数据预处理之独热编码背景：在很多机器学习任务中，特征并不总是连续值，而可能是分类值。 例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, ‘Q’, ‘C’}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  ‘Q’：2,  ‘C’：3}可以将三个不同类别映射为数字），效率会提高很多。 那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数">
+<meta property="og:description" content="2018.10.11 – 2018.10.31学了什么： 复习了线性代数和概率论基础 复习了NG的课程 统计学习方法（80%） 刘建平的ML博文（47/69）  学得如何： 算法的数学原理和伪代码基本可以手撸出来，但对于各个算法间的区别和联系及其应用场景理解不太行 本月学得东西比较少，大部分时间都看比赛去了，看着17战队频频失误，RNG止步八强真的有点糟心  下个月计划： 看完统计学习方法 过一遍">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-16T14:41:51.631Z">
+<meta property="og:updated_time" content="2018-10-31T08:53:04.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="one-hot">
-<meta name="twitter:description" content="数据预处理之独热编码背景：在很多机器学习任务中，特征并不总是连续值，而可能是分类值。 例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, ‘Q’, ‘C’}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  ‘Q’：2,  ‘C’：3}可以将三个不同类别映射为数字），效率会提高很多。 那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数">
+<meta name="twitter:title" content="10月总结">
+<meta name="twitter:description" content="2018.10.11 – 2018.10.31学了什么： 复习了线性代数和概率论基础 复习了NG的课程 统计学习方法（80%） 刘建平的ML博文（47/69）  学得如何： 算法的数学原理和伪代码基本可以手撸出来，但对于各个算法间的区别和联系及其应用场景理解不太行 本月学得东西比较少，大部分时间都看比赛去了，看着17战队频频失误，RNG止步八强真的有点糟心  下个月计划： 看完统计学习方法 过一遍">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="https://hustzyy.github.io/2018/10/12/one-hot/"/>
+  <link rel="canonical" href="https://hustzyy.github.io/2018/10/31/10月总结/"/>
 
 
 
 
 
-  <title>one-hot | 夜未央的博客</title>
+  <title>10月总结 | 夜未央的博客</title>
   
 
 
@@ -265,7 +265,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://hustzyy.github.io/2018/10/12/one-hot/">
+    <link itemprop="mainEntityOfPage" href="https://hustzyy.github.io/2018/10/31/10月总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="夜未央">
@@ -282,7 +282,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">one-hot</h1>
+          <h1 class="post-title" itemprop="name headline">10月总结</h1>
         
 
         <div class="post-meta">
@@ -294,8 +294,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-12T19:31:30+08:00">
-                2018-10-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-31T16:34:07+08:00">
+                2018-10-31
               </time>
             
 
@@ -317,8 +317,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
+                  <a href="/categories/emmmm/" itemprop="url" rel="index">
+                    <span itemprop="name">emmmm</span>
                   </a>
                 </span>
 
@@ -354,23 +354,21 @@
       
 
       
-        <h2 id="数据预处理之独热编码"><a href="#数据预处理之独热编码" class="headerlink" title="数据预处理之独热编码"></a>数据预处理之独热编码</h2><h4 id="背景："><a href="#背景：" class="headerlink" title="背景："></a>背景：</h4><p><strong>在很多机器学习任务中，特征并不总是连续值，而可能是分类值。</strong></p>
-<p>例如Kaggle的泰坦尼克号入门项目中，Pclass就是一个离散型特征，取值范围为{‘S’, ‘Q’, ‘C’}，如果将字符型特征值转为为数值型（如通过{‘S’： 1,  ‘Q’：2,  ‘C’：3}可以将三个不同类别映射为数字），效率会提高很多。</p>
-<p>那么转化为数字后就能直接喂给分类器吗？不能！因为分类器往往默认数据数据是连续的，并且是有序的。但是，按照我们上述的表示，数字并不是有序的，而是随机分配的。</p>
-<p>为了解决以上问题，一种解决方案就是采用独热编码。它又称一位有效编码，其方法是使用N位状态寄存器来对N个状态进行编码，每个状态都由他独立的寄存器位，并且在任意时候，其中只有一位有效。</p>
-<p>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">自然状态码：1， 2， 3， 4， 5</span><br><span class="line">独热编码：00001， 00010， 00100， 01000， 10000</span><br></pre></td></tr></table></figure>
-<h4 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h4><p>使用one-hot编码，<strong>将离散特征的取值扩展到了欧式空间</strong>，离散特征的某个取值就对应欧式空间的某个点。又因为在回归，分类，聚类等机器学习算法中，特征之间距离的计算或相似度的计算是非常重要的，而我们常用的距离或相似度的计算都是在欧式空间的相似度计算，计算余弦相似性，基于的就是欧式空间。所以将离散型特征使用one-hot编码，会让特征之间的距离计算更加合理。</p>
-<h4 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h4><p>离散特征进行one-hot编码后，编码后的特征每一维度的特征都可以看做是连续的特征。就可以跟对连续型特征的归一化方法一样，对每一维特征进行归一化。</p>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
-<li><p>one-hot既能在一定程度上也起到了扩充特征的作用，也可能引发<strong>维度灾难</strong>问题。</p>
-</li>
-<li><p>Tree Model不太需要one-hot编码。（一般非参数模型不需要进行数据归一化处理（如随机森林），基于参数或者基于距离的模型才要进行特征归一化）</p>
-<ul>
-<li>对于决策树来说，one-hot的本质是增加树的深度， tree-model是在动态的过程中生成类似 One-Hot + Feature Crossing 的机制 。</li>
-<li>决策树是没有特征大小的概念的，只有特征处于他分布的哪一部分的概念 。</li>
+        <h1 id="2018-10-11-–-2018-10-31"><a href="#2018-10-11-–-2018-10-31" class="headerlink" title="2018.10.11 – 2018.10.31"></a>2018.10.11 – 2018.10.31</h1><h4 id="学了什么："><a href="#学了什么：" class="headerlink" title="学了什么："></a>学了什么：</h4><ol>
+<li>复习了线性代数和概率论基础</li>
+<li>复习了NG的课程</li>
+<li>统计学习方法（80%）</li>
+<li>刘建平的ML博文（47/69）</li>
+</ol>
+<h4 id="学得如何："><a href="#学得如何：" class="headerlink" title="学得如何："></a>学得如何：</h4><ul>
+<li>算法的数学原理和伪代码基本可以手撸出来，但对于各个算法间的区别和联系及其应用场景理解不太行</li>
+<li>本月学得东西比较少，大部分时间都看比赛去了，看着17战队频频失误，RNG止步八强真的有点糟心</li>
 </ul>
-</li>
+<h4 id="下个月计划："><a href="#下个月计划：" class="headerlink" title="下个月计划："></a>下个月计划：</h4><ol>
+<li>看完统计学习方法</li>
+<li>过一遍python数据分析</li>
+<li>学习xgb、lgb的原理及应用</li>
+<li>高等工程数学（逃课这么久，再不学挂科了）</li>
 </ol>
 
       
@@ -389,9 +387,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/编码/" rel="tag"># 编码</a>
-          
-            <a href="/tags/离散特征处理/" rel="tag"># 离散特征处理</a>
+            <a href="/tags/总结/" rel="tag"># 总结</a>
           
         </div>
       
@@ -404,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/11/阶段总结/" rel="next" title="阶段总结">
-                <i class="fa fa-chevron-left"></i> 阶段总结
+              <a href="/2018/10/12/one-hot/" rel="next" title="one-hot">
+                <i class="fa fa-chevron-left"></i> one-hot
               </a>
             
           </div>
@@ -413,10 +409,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/31/10月总结/" rel="prev" title="10月总结">
-                10月总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -569,7 +561,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据预处理之独热编码"><span class="nav-number">1.</span> <span class="nav-text">数据预处理之独热编码</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#背景："><span class="nav-number">1.0.1.</span> <span class="nav-text">背景：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原因："><span class="nav-number">1.0.2.</span> <span class="nav-text">原因：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果："><span class="nav-number">1.0.3.</span> <span class="nav-text">结果：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注意："><span class="nav-number">1.0.4.</span> <span class="nav-text">注意：</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2018-10-11-–-2018-10-31"><span class="nav-number">1.</span> <span class="nav-text">2018.10.11 – 2018.10.31</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#学了什么："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">学了什么：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#学得如何："><span class="nav-number">1.0.0.2.</span> <span class="nav-text">学得如何：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下个月计划："><span class="nav-number">1.0.0.3.</span> <span class="nav-text">下个月计划：</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
